@@ -60,4 +60,8 @@ public class Klass {
             listener.notifiedMemberAppend(student);
         }
     }
+
+    public boolean isIn(Student student) {
+        return student.getKlass() == this;
+    }
 }

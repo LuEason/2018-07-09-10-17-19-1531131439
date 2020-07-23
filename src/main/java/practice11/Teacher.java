@@ -65,7 +65,12 @@ public class Teacher extends Person implements JoinListener {
     }
 
     public Boolean isTeaching(Student student) {
-        return classes.contains(student.getKlass());
+        for(Klass klass : classes) {
+            if (klass.isIn(student)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
